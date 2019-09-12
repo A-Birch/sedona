@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <title>Седона</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+  	document.documentElement.classList.remove('no-js');
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="main-header">
+      <nav class="main-menu">
+        <ul class="main-menu__list">
+          <!-- "main-menu__list--closed"-->
+          <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="photo.html">Фото и видео</a></li>
+          <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="">Форма отзыва</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="index.html#hotel">Найти гостиницу</a></li>
+        </ul>
+        <button class="main-menu__toggle" id="menu"></button>
+        <!-- "main-menu__toggle--closed"-->
+        <div class="main-menu__logo">
+          <a href="index.html">
+            <picture>
+              <source media="(min-width:1280px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" alt="лого" width="102" height="83">
+            </picture>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="intro__picture intro__picture--small">Sedona</div>
+        <div class="intro__text intro__text--form">
+          <h1>Оставьте свой отзыв</h1>
+          <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+      </section>
+      <form class="form-container">
+        <div class="field field--name">
+          <h2 class="field__title field__title--tablet-left">Представьтесь<span class="hide hide--tablet hide--desktop-show">, пожалуйста</span>:</h2>
+          <div class="input-name">
+            <label class="input-name__label" for="name">Имя:</label>
+            <input class="input-name__input input-name__input--name" type="text" id="name" placeholder="Петр">
+          </div>
+          <div class="input-name">
+            <label class="input-name__label" for="surname">Фамилия:</label>
+            <input class="input-name__input input-name__input--surname" type="text" id="surname" placeholder="Иванов">
+          </div>
+          <div class="input-name">
+            <label class="input-name__label" for="patronymic">Отчество:</label>
+            <input class="input-name__input input-name__input--patronymic" type="text" id="patronymic" placeholder="Александрович">
+          </div>
+        </div>
+        <div class="field field--tel">
+          <h2 class="field__title field__title--up">Контактная информация:</h2>
+          <div class="input-contacts">
+            <label class="input-contacts__label" for="tel"><span class="hide hide--desktop">Контактный</span> телефон:</label>
+            <div class="input-contacts__container">
+              <input class="input-contacts__input input-contacts__input--tel" type="tel" id="tel" placeholder="Введите телефон"><span class="input-contacts__icon input-contacts__icon--tel"></span></div>
+            <span class="input-contacts__error">Ошибка, перепроверьте номер</span>
+          </div>
+          <div class="input-contacts">
+            <label class="input-contacts__label" for="email">Электронная почта:</label>
+            <div class="input-contacts__container">
+              <input class="input-contacts__input input-contacts__input--email" type="email" id="email" placeholder="Введите email"><span class="input-contacts__icon input-contacts__icon--email"></span></div>
+          </div>
+        </div>
+        <div class="field field--radio">
+          <h2 class="field__title field__title--tablet-left">Ваше общее впечатление:</h2>
+          <div class="radio">
+            <input class="radio__input" type="radio" id="radio-1" name="radio" checked>
+            <label class="radio__label" for="radio-1">Скорее положительное</label>
+          </div>
+          <div class="radio">
+            <input class="radio__input" type="radio" id="radio-2" name="radio">
+            <label class="radio__label" for="radio-2">Скорее отрицательное</label>
+          </div>
+          <div class="radio">
+            <input class="radio__input" type="radio" id="radio-3" name="radio">
+            <label class="radio__label" for="radio-3">Затрудняюсь ответить</label>
+          </div>
+        </div>
+        <div class="field field--checkbox">
+          <h2 class="field__title field__title--up field__title--upper">Посещенные достопримечательности:</h2>
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="checkbox-1" name="checkbox-1" checked>
+            <label class="checkbox__label" for="checkbox-1">Мост Дьявола</label>
+          </div>
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="checkbox-2" name="checkbox-2" checked>
+            <label class="checkbox__label" for="checkbox-2">Слайд-парк</label>
+          </div>
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="checkbox-3" name="checkbox-3" checked>
+            <label class="checkbox__label" for="checkbox-3">Гора-Колокол</label>
+          </div>
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="checkbox-4" name="checkbox-4">
+            <label class="checkbox__label" for="checkbox-4">Красные скалы</label>
+          </div>
+        </div>
+        <div class="field field--textarea">
+          <h2 class="field__title field__title--up">Опишите свои эмоции:</h2>
+          <textarea class="input-textarea" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+        </div>
+        <button class="btn btn--send" type="submit" value="Отправить отзыв">Отправить отзыв</button>
+        <span class="form-container__required" hidden>* — обязательные поля</span>
+      </form>
+      <div class="intro intro--popup intro--failure" hidden>
+        <div class="intro__text intro__text--popup">
+          <h2>Что-то пошло не так!</h2>
+          <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <a class="btn btn--popup" href="">Ок</a>
+      </div>
+      <div class="intro intro--popup intro--success" hidden>
+        <div class="intro__text intro__text--popup">
+          <h2>Ваш отзыв отправлен!</h2>
+          <p>Спасибо за участие, ваш отзыв уже поступил к нам. В ближайшее время мы скоро опубликуем его на сайте.</p>
+        </div>
+        <a class="btn btn--popup btn--success" href="">Закрыть окно</a>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="social">
+        <a class="social__hashtag" href="">#visitsedona</a>
+        <div class="social__items">
+          <a class="social__item social__item--twitter" href="">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="17.5" height="14.663" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <g id="W6EeEF_1_">
+                <g>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
+      c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
+      c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
+      c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
+      c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461
+      c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a class="social__item social__item--facebook" href="">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="8.672" height="18.944" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+              <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
+  H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
+  C5.765,5.069,5.75,3.709,6.275,3.356z" />
+            </svg>
+          </a>
+          <a class="social__item social__item--youtube" href="">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="19.979" height="14.015" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+              <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
+  C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" />
+            </svg>
+          </a>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+  <script src="js/picturefill.min.js" async></script>
+</body>
+
+</html>
